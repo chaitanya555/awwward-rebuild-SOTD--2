@@ -4,16 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "gatsby build"
-    "dev": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
-    "backend:build": "node app.mjs",
-    "start": "npm run backend:build",
-    "backend:development": "nodemon app.mjs",
-    "frontend:build": "webpack --progress --config webpack.config.build.js",
-    "frontend:development": "cross-env NODE_ENV=dev webpack --progress --config webpack.config.development.js --watch",
-    "lint": "eslint *.js",
-    "test": "node -c *.js",
-    "postinstall": "npm run frontend:build"
+  "build": "gatsby build",
+  "dev": "concurrently --kill-others \"npm run backend:development\" \"npm run frontend:development\"",
+  "backend:build": "node app.mjs",
+  "start": "npm run backend:build",
+  "backend:development": "nodemon app.mjs",
+  "frontend:build": "webpack --progress --config webpack.config.build.js",
+  "frontend:development": "cross-env NODE_ENV=dev webpack --progress --config webpack.config.development.js --watch",
+  "lint": "eslint *.js",
+  "test": "node -c *.js",
+  "postinstall": "npm run frontend:build"
   },
   "directories": {
   "public": "public"
